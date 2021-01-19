@@ -12,15 +12,17 @@ function App() {
 
   useEffect(() => {
     const getMemeArray = async() => {
-      const arr = await axios
+      const response = await axios
       .get("/get_memes/")
-      .then((response) =>response.data.data.memes);
-      console.log(arr);
-    return arr;
+      // you dont need the then with await you will directly get the data in arr
+      //.then((response) =>response.data.data.memes);
+      //console.log(arr);
+      return response.data.data.memes;
     };
     getMemeArray().then(response => {
-      setMemeArray(response)
-      memeUrl = memeArray[counter].url;
+      console.log(response)
+      setMemeArray(response[0])
+      //memeUrl = memeArray[counter].url;
     });
   }, []);
 
@@ -41,7 +43,7 @@ function App() {
         <input className="btn" type="submit" value="Generate"></input>
       </form>
       <div className="image-wrapper">
-        <img className="meme-img" src={memeUrl} />
+        <img className="meme-img" src={memeArray.url} />
         <p className="first-cap"></p>
         <p className="second-cap"></p>
       </div>
