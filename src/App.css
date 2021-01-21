@@ -52,14 +52,34 @@
 }
 
 .image-wrapper {
-  width: 95%;
+  min-width: 90%;
   min-height: 20rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   margin: 3rem 0;
   background-color: #fff;
   overflow: hidden;
-  border: 2px solid coral;
 }
 
 .meme-img {
   width: 100%;
+  margin: 0 auto;
+}
+
+.first-cap {
+  max-width: 40%;
+  position: absolute;
+  top: 20%;
+  right:4%;
+  font-size: 2rem;
+}
+
+.second-cap {
+  max-width: 40%;
+  height: 10rem;
+  position: absolute;
+  font-size: 2rem;
+  top: 70%;
+  right: 4%;
 }
