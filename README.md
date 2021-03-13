@@ -1,5 +1,6 @@
-# Getting Started with Create React App
+# Meme-factory
 
+WBS Coding School Exercise, Basic react app, displaying memes from API and the adding captions to them
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
